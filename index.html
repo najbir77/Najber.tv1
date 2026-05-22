@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Najber TV</title>
+    <style>
+        body { background-color: #1a1a1a; color: white; text-align: center; font-family: sans-serif; padding-top: 50px; }
+        input { padding: 15px; border-radius: 8px; border: none; width: 80%; max-width: 300px; margin-bottom: 10px; }
+        button { padding: 15px 30px; background-color: #e50914; color: white; border: none; border-radius: 8px; cursor: pointer; }
+    </style>
+</head>
 <body>
     <h1>Najber TV</h1>
-    <p>کۆدێ خۆ لێبدە</p>
-    <input type="password" id="pass">
+    <p>پاسۆردی بنڤیسە دا کەنال ڤەبن</p>
+    
+    <input type="password" id="pass" placeholder="پاسۆردی بنڤیسە">
+    <br>
     <button onclick="check()">چوون</button>
+
     <script>
         function check() {
-            if(document.getElementById("pass").value === "123") {
-                alert("سەرکەفتی!");
-            } else { alert("خەلەتییە!"); }
+            var password = document.getElementById("pass").value;
+            if(password === "777" || password === "444") {
+                alert("سەرکەفتی! دێ هێیە ڤەگوهاستن.");
+                window.location.href = "https://google.com"; // ل ڤێرێ لینکا کەنالێ خۆ دابنێ
+            } else {
+             alert(پاسۆردێ تە خەلەتە!")
+            }
         }
     </script>
 </body>
 </html>
-
