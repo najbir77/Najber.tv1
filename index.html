@@ -1,37 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="ku">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najber TV</title>
     <style>
-        body { background-color: #1a1a1a; color: white; text-align: center; font-family: sans-serif; padding-top: 50px; }
-        input { padding: 15px; border-radius: 8px; border: none; width: 80%; max-width: 300px; margin-bottom: 10px; }
-        button { padding: 15px 30px; background-color: #e50914; color: white; border: none; border-radius: 8px; cursor: pointer; margin: 5px; }
-        .test-btn { background-color: #333; }
+        body { background-color: #000; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .logo { width: 160px; margin-bottom: 20px; border-radius: 15px; }
+        .btn { display: block; width: 100%; padding: 18px; margin: 12px 0; background: #007bff; color: white; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; }
+        .contact { margin-top: 50px; padding: 20px; border-top: 1px solid #333; color: #aaa; }
     </style>
 </head>
 <body>
-    <h1>Najber TV</h1>
-    <p>پاسۆردی بنڤیسە یان تێستێ بکە</p>
+    <img src="https://i.imgur.com/g055y2T.png" class="logo" alt="Logo">
     
-    <input type="password" id="pass" placeholder="پاسۆرد">
-    <br>
-    <button onclick="check()">چوون</button>
-    <button class="test-btn" onclick="startTrial()">تێست (15 دەقیقە)</button>
-
-    <script>
-        function check() {
-            var p = document.getElementById("pass").value;
-            if(p === "777" || p === "444") {
-                window.location.href = "https://google.com";
-            } else {
-                alert("پاسۆرد خەلەتییە!");
-            }
-        }
-        function startTrial() {
-            alert("تێست دەست پێکر: 15 دەقیقە.");
-            setTimeout(function() { alert("تێست ب دووماهی هات!"); window.location.reload(); }, 900000);
-        }
-    </script>
+    <a href="https://rudaw-live.akamaized.net/hls/live/2016334/rudaw/playlist.m3u8" class="btn">کەنالا روداو</a>
+    <a href="#" class="btn">کەنالا 2</a>
+    
+    <div class="contact">
+        <p>بۆ کڕینا کۆدی پەیوەندیێ ب ڤێ ژمارێ بکه:</p>
+        <h2 style="color: #fff;">07501020015</h2>
+    </div>
 </body>
 </html>
 
