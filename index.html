@@ -3,29 +3,49 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; margin: 0; }
-        h1 { padding-top: 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
-        .box { background: #1a1a1a; padding: 15px; border-radius: 12px; border: 1px solid #333; cursor: pointer; transition: 0.3s; }
-        .box:hover { border-color: #e50914; }
-        .logo { width: 60px; height: 60px; display: block; margin: 0 auto 10px; border-radius: 50%; }
-        #login { padding: 50px; }
-        input { padding: 12px; border-radius: 6px; border: none; width: 80%; margin-bottom: 10px; }
-        button { padding: 12px 30px; background: #e50914; color: white; border: none; border-radius: 6px; cursor: pointer; }
+        body { background: #000; color: #fff; font-family: sans-serif; }
+        .category { margin: 20px 10px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .box { background: #1a1a1a; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #333; }
+        .logo { width: 40px; display: block; margin: 0 auto 5px; }
+        #login { padding: 50px; text-align: center; }
     </style>
 </head>
 <body>
 
 <div id="login">
-    <h2>Najber TV</h2>
-    <input type="password" id="p" placeholder="پاسۆردێ بنڤیسە">
+    <input type="password" id="p" placeholder="پاسۆرد">
     <button onclick="go()">چوونە ژۆر</button>
 </div>
 
 <div id="app" style="display:none;">
-    <h1>Najber TV</h1>
-    <div class="grid" id="channel-list">
+    <div class="category">
+        <h3>beIN Sport</h3>
+        <div class="grid">
+            <div class="box" onclick="location.href='LINK_BEIN'">
+                <img src="https://cdn-icons-png.flaticon.com/512/3067/3067401.png" class="logo">
+                beIN 1
+            </div>
         </div>
+    </div>
+
+    <div class="category">
+        <h3>Alwan Sport</h3>
+        <div class="grid">
+            <div class="box" onclick="location.href='LINK_ALWAN'">
+                <img src="https://cdn-icons-png.flaticon.com/512/3067/3067401.png" class="logo">
+                Alwan 1
+            </div>
+        </div>
+    </div>
+
+    <div class="category">
+        <h3>کەنالێن کوردی</h3>
+        <div class="grid">
+            <div class="box" onclick="location.href='LINK_RUDAW'">روداو</div>
+            <div class="box" onclick="location.href='LINK_NRT'">NRT</div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -38,4 +58,3 @@
 </script>
 </body>
 </html>
-
