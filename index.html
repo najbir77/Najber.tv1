@@ -3,21 +3,28 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { background: #0c121c; color: #fff; font-family: sans-serif; margin: 0; padding: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 10px; }
-        .card { background: #1a2533; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #2d3e50; }
-        .icon { width: 40px; height: 40px; background: #2d3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
-        .nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #0c121c; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #2d3e50; font-size: 14px; }
+        body { background: #0c121c; color: #fff; font-family: sans-serif; margin: 0; padding: 15px; }
+        
+        /* دیزاینێ ناڤێ بەشان */
+        .title { color: #00d4ff; margin: 20px 0 10px 5px; font-weight: bold; font-size: 18px; }
+        
+        /* دیزاینێ کارتێن کەنالا (ئەوێن پڕۆفیشناڵ) */
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .card { background: #1a2533; padding: 12px; border-radius: 15px; text-align: center; border: 1px solid #2d3e50; }
+        .card-icon { font-size: 14px; font-weight: bold; color: #fff; }
+        
+        /* دیزاینێ بارێ خوارێ (Navigation Bar) */
+        .nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #0c121c; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #2d3e50; font-size: 13px; color: #889; }
     </style>
 </head>
 <body>
 
-    <h2 style="padding:10px; color:#00d4ff;">وەرزش</h2>
+    <div class="title">وەرزش</div>
     <div class="grid">
-        <div class="card"><div class="icon">TV</div></div>
-        <div class="card"><div class="icon">TV</div></div>
-        <div class="card"><div class="icon">TV</div></div>
-        <div class="card"><div class="icon">TV</div></div>
+        <div class="card"><div class="card-icon">TV</div></div>
+        <div class="card"><div class="card-icon">TV</div></div>
+        <div class="card"><div class="card-icon">TV</div></div>
+        <div class="card"><div class="card-icon">TV</div></div>
     </div>
 
     <div class="nav">
