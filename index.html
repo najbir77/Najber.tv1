@@ -3,36 +3,37 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: sans-serif; margin: 0; padding-bottom: 20px; }
-        h2 { border-left: 4px solid #e50914; padding-left: 10px; margin: 20px 10px; color: #e50914; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 10px; }
-        .box { background: #181818; padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #333; }
-        .logo { width: 50px; height: 50px; display: block; margin: 0 auto 8px; border-radius: 8px; }
-        #login { padding: 100px 20px; text-align: center; }
-        input { width: 80%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #000; color: #fff; text-align: center; }
-        button { margin-top: 15px; padding: 12px 30px; background: #e50914; color: #fff; border: none; border-radius: 8px; }
+        body { background: #0a0a0a; color: #fff; font-family: sans-serif; margin: 0; padding: 10px; }
+        h2 { border-left: 4px solid #e50914; padding-left: 10px; margin: 20px 0; color: #e50914; font-size: 18px; }
+        /* ئەڤە یێ دکت کەنال ببنە یێن ڕێک و پێک */
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .box { background: #181818; padding: 10px 5px; border-radius: 6px; text-align: center; border: 1px solid #333; font-size: 12px; }
+        .box:active { background: #e50914; }
     </style>
 </head>
 <body>
 
-<div id="login">
-    <h1>Najber TV</h1>
-    <input type="password" id="p" placeholder="پاسۆردێ بنڤیسە">
-    <br>
-    <button onclick="go()">چوونە ژۆر</button>
-</div>
-
-<div id="app" style="display:none;">
-    <h1 style="text-align:center;">Najber TV</h1>
+<div id="app">
+    <h1 style="text-align:center; color:#e50914;">Najber TV</h1>
 
     <h2>beIN Sport</h2>
     <div class="grid">
-        <div class="box" onclick="location.href='#'"><img src="https://cdn-icons-png.flaticon.com/512/3067/3067401.png" class="logo">beIN 1</div>
+        <div class="box" onclick="location.href='#'">beIN 1</div>
+        <div class="box" onclick="location.href='#'">beIN 2</div>
+        <div class="box" onclick="location.href='#'">beIN 3</div>
+        <div class="box" onclick="location.href='#'">beIN 4</div>
+        <div class="box" onclick="location.href='#'">beIN 5</div>
+        <div class="box" onclick="location.href='#'">beIN 6</div>
+        <div class="box" onclick="location.href='#'">beIN 7</div>
+        <div class="box" onclick="location.href='#'">beIN 8</div>
+        <div class="box" onclick="location.href='#'">beIN 9</div>
     </div>
 
     <h2>Alwan Sport</h2>
     <div class="grid">
-        <div class="box" onclick="location.href='#'"><img src="https://cdn-icons-png.flaticon.com/512/3067/3067401.png" class="logo">Alwan 1</div>
+        <div class="box" onclick="location.href='#'">Alwan 1</div>
+        <div class="box" onclick="location.href='#'">Alwan 2</div>
+        <div class="box" onclick="location.href='#'">Alwan 3</div>
     </div>
 
     <h2>کەنالێن کوردی</h2>
@@ -42,13 +43,6 @@
     </div>
 </div>
 
-<script>
-    function go() {
-        if(document.getElementById('p').value == "1234") { 
-            document.getElementById('login').style.display = 'none';
-            document.getElementById('app').style.display = 'block';
-        } else { alert("پاسۆردێ تە خەلەتە!"); }
-    }
-</script>
 </body>
 </html>
+
