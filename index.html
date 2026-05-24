@@ -1,54 +1,61 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { background: #0c121c; color: #fff; font-family: sans-serif; margin: 0; }
-        /* شاشا پاسۆردێ */
-        #login-screen { padding: 100px 20px; text-align: center; }
-        input { padding: 10px; border-radius: 8px; border: 1px solid #2d3e50; background: #1a2533; color: #fff; text-align: center; width: 200px; }
-        button { padding: 10px 20px; background: #00d4ff; border: none; border-radius: 8px; color: #0c121c; font-weight: bold; }
-        /* دیزاینێ ئەپێ */
-        #app-content { display: none; padding: 15px; }
-        .title { color: #00d4ff; margin: 20px 0 10px 5px; font-weight: bold; }
-        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-        .card { background: #1a2533; padding: 10px; border-radius: 12px; text-align: center; border: 1px solid #2d3e50; font-size: 11px; }
+        body { background: #0c121c; color: #fff; font-family: sans-serif; margin: 0; padding-bottom: 70px; }
+        .app-content { padding: 15px; }
+        .title { color: #00d4ff; margin: 20px 0 10px 5px; font-weight: bold; font-size: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .card { background: #1a2533; padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #2d3e50; }
+        .card-name { font-size: 11px; margin-top: 8px; color: #fff; }
         .nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #0c121c; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #2d3e50; color: #889; font-size: 12px; }
     </style>
 </head>
 <body>
 
-<div id="login-screen">
-    <h2>Najber TV</h2>
-    <input type="password" id="pass" placeholder="پاسۆرد">
-    <br><br>
-    <button onclick="check()">چوونە ژۆر</button>
+<div class="app-content">
+    <div class="title">World Cup Channels</div>
+    <div class="grid">
+        <div class="card"><div class="card-name">beIN Sports MAX 1</div></div>
+        <div class="card"><div class="card-name">beIN Sports MAX 2</div></div>
+        <div class="card"><div class="card-name">beIN Sports MAX 3</div></div>
+    </div>
+
+    <div class="title">Thamania</div>
+    <div class="grid">
+        <div class="card"><div class="card-name">Thamania 1</div></div>
+        <div class="card"><div class="card-name">Thamania 2</div></div>
+        <div class="card"><div class="card-name">Thamania 3</div></div>
+    </div>
+
+    <div class="title">StarzPlay Sports</div>
+    <div class="grid">
+        <div class="card"><div class="card-name">Sports 1</div></div>
+        <div class="card"><div class="card-name">Sports 2</div></div>
+        <div class="card"><div class="card-name">Sports 3</div></div>
+    </div>
+
+    <div class="title">Abu Dhabi Sport</div>
+    <div class="grid">
+        <div class="card"><div class="card-name">AD Sports 1</div></div>
+        <div class="card"><div class="card-name">AD Sports 2</div></div>
+        <div class="card"><div class="card-name">Premium 1</div></div>
+    </div>
+
+    <div class="title">کەنالێن گشتی</div>
+    <div class="grid">
+        <div class="card"><div class="card-name">beIN 1</div></div>
+        <div class="card"><div class="card-name">Alwan 1</div></div>
+        <div class="card"><div class="card-name">روداو</div></div>
+    </div>
 </div>
 
-<div id="app-content">
-    <div class="title">beIN Sport</div>
-    <div class="grid">
-        <div class="card">beIN 1</div> <div class="card">beIN 2</div> <div class="card">beIN 3</div> <div class="card">beIN 4</div>
-        <div class="card">beIN 5</div> <div class="card">beIN 6</div> <div class="card">beIN 7</div> <div class="card">beIN 8</div> <div class="card">beIN 9</div>
-    </div>
-    <div class="title">Alwan Sport</div>
-    <div class="grid">
-        <div class="card">Alwan 1</div> <div class="card">Alwan 2</div> <div class="card">Alwan 3</div> <div class="card">Alwan 4</div>
-        <div class="card">Alwan 5</div> <div class="card">Alwan 6</div> <div class="card">Alwan 7</div> <div class="card">Alwan 8</div> <div class="card">Alwan 9</div>
-    </div>
-    <div class="nav">
-        <div>کۆد</div> <div>زنجیرە</div> <div>فیلم</div> <div>سەرەکی</div>
-    </div>
+<div class="nav">
+    <div>کۆد</div> <div>زنجیرە</div> <div>فیلم</div> <div>سەرەکی</div>
 </div>
 
-<script>
-    function check() {
-        if(document.getElementById('pass').value == "1234") {
-            document.getElementById('login-screen').style.display = 'none';
-            document.getElementById('app-content').style.display = 'block';
-        } else { alert("پاسۆردێ تە خەلەتە!"); }
-    }
-</script>
 </body>
 </html>
 
