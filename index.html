@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="ku">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Najber TV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { background-color: #121212; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
-        .channel-btn { display: block; width: 90%; margin: 10px auto; padding: 15px; background-color: #1f1f1f; border: 1px solid #333; border-radius: 10px; color: white; text-decoration: none; font-size: 18px; }
-        .channel-btn:hover { background-color: #e50914; }
+        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; margin: 0; }
+        h1 { padding-top: 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+        .box { background: #1a1a1a; padding: 15px; border-radius: 12px; border: 1px solid #333; cursor: pointer; transition: 0.3s; }
+        .box:hover { border-color: #e50914; }
+        .logo { width: 60px; height: 60px; display: block; margin: 0 auto 10px; border-radius: 50%; }
+        #login { padding: 50px; }
+        input { padding: 12px; border-radius: 6px; border: none; width: 80%; margin-bottom: 10px; }
+        button { padding: 12px 30px; background: #e50914; color: white; border: none; border-radius: 6px; cursor: pointer; }
     </style>
 </head>
 <body>
+
+<div id="login">
+    <h2>Najber TV</h2>
+    <input type="password" id="p" placeholder="پاسۆردێ بنڤیسە">
+    <button onclick="go()">چوونە ژۆر</button>
+</div>
+
+<div id="app" style="display:none;">
     <h1>Najber TV</h1>
-    <a href="لینکێ_کەنالێ_1" class="channel-btn">روداو</a>
-    <a href="لینکێ_کەنالێ_2" class="channel-btn">کوردستان 24</a>
+    <div class="grid" id="channel-list">
+        </div>
+</div>
+
+<script>
+    function go() {
+        if(document.getElementById('p').value == "1234") { 
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('app').style.display = 'block';
+        } else { alert("پاسۆردێ تە خەلەتە!"); }
+    }
+</script>
 </body>
 </html>
 
