@@ -3,45 +3,37 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: sans-serif; margin: 0; padding: 10px; }
-        h2 { border-left: 4px solid #e50914; padding-left: 10px; margin: 20px 0; color: #e50914; font-size: 18px; }
-        /* ئەڤە یێ دکت کەنال ببنە یێن ڕێک و پێک */
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-        .box { background: #181818; padding: 10px 5px; border-radius: 6px; text-align: center; border: 1px solid #333; font-size: 12px; }
+        body { background: #0a0a0a; color: #fff; font-family: sans-serif; margin: 0; padding: 15px; }
+        .category-title { border-left: 4px solid #e50914; padding-left: 10px; margin: 25px 0 15px 0; color: #e50914; font-size: 18px; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .box { background: #181818; padding: 15px 5px; border-radius: 8px; text-align: center; border: 1px solid #333; font-size: 11px; transition: 0.2s; }
         .box:active { background: #e50914; }
     </style>
 </head>
 <body>
 
-<div id="app">
     <h1 style="text-align:center; color:#e50914;">Najber TV</h1>
 
-    <h2>beIN Sport</h2>
+    <div class="category-title">beIN Sport</div>
     <div class="grid">
-        <div class="box" onclick="location.href='#'">beIN 1</div>
-        <div class="box" onclick="location.href='#'">beIN 2</div>
-        <div class="box" onclick="location.href='#'">beIN 3</div>
-        <div class="box" onclick="location.href='#'">beIN 4</div>
-        <div class="box" onclick="location.href='#'">beIN 5</div>
-        <div class="box" onclick="location.href='#'">beIN 6</div>
-        <div class="box" onclick="location.href='#'">beIN 7</div>
-        <div class="box" onclick="location.href='#'">beIN 8</div>
-        <div class="box" onclick="location.href='#'">beIN 9</div>
+        <div class="box">beIN 1</div> <div class="box">beIN 2</div> <div class="box">beIN 3</div>
+        <div class="box">beIN 4</div> <div class="box">beIN 5</div> <div class="box">beIN 6</div>
+        <div class="box">beIN 7</div> <div class="box">beIN 8</div> <div class="box">beIN 9</div>
     </div>
 
-    <h2>Alwan Sport</h2>
+    <div class="category-title">Alwan Sport</div>
     <div class="grid">
-        <div class="box" onclick="location.href='#'">Alwan 1</div>
-        <div class="box" onclick="location.href='#'">Alwan 2</div>
-        <div class="box" onclick="location.href='#'">Alwan 3</div>
+        <div class="box">Alwan 1</div> <div class="box">Alwan 2</div> <div class="box">Alwan 3</div>
+        <div class="box">Alwan 4</div> <div class="box">Alwan 5</div> <div class="box">Alwan 6</div>
+        <div class="box">Alwan 7</div> <div class="box">Alwan 8</div> <div class="box">Alwan 9</div>
     </div>
 
-    <h2>کەنالێن کوردی</h2>
+    <div class="category-title">کەنالێن کوردی</div>
     <div class="grid">
-        <div class="box" onclick="location.href='#'">روداو</div>
-        <div class="box" onclick="location.href='#'">NRT</div>
+        <div class="box">روداو</div>
+        <div class="box">NRT</div>
+        <div class="box">کوردسات</div>
     </div>
-</div>
 
 </body>
 </html>
