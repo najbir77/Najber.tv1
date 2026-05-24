@@ -3,28 +3,37 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { background: #0c121c; color: #fff; font-family: sans-serif; margin: 0; padding: 15px; }
-        
-        /* دیزاینێ ناڤێ بەشان */
-        .title { color: #00d4ff; margin: 20px 0 10px 5px; font-weight: bold; font-size: 18px; }
-        
-        /* دیزاینێ کارتێن کەنالا (ئەوێن پڕۆفیشناڵ) */
-        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-        .card { background: #1a2533; padding: 12px; border-radius: 15px; text-align: center; border: 1px solid #2d3e50; }
-        .card-icon { font-size: 14px; font-weight: bold; color: #fff; }
-        
-        /* دیزاینێ بارێ خوارێ (Navigation Bar) */
-        .nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #0c121c; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #2d3e50; font-size: 13px; color: #889; }
+        body { background: #0c121c; color: #fff; font-family: sans-serif; margin: 0; padding: 10px; }
+        .title { color: #00d4ff; margin: 20px 0 10px 5px; font-weight: bold; font-size: 16px; }
+        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; padding-bottom: 60px; }
+        .card { background: #1a2533; padding: 10px; border-radius: 12px; text-align: center; border: 1px solid #2d3e50; font-size: 11px; }
+        .nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #0c121c; display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #2d3e50; color: #889; font-size: 12px; }
     </style>
 </head>
 <body>
 
-    <div class="title">وەرزش</div>
+    <div class="title">beIN Sport</div>
     <div class="grid">
-        <div class="card"><div class="card-icon">TV</div></div>
-        <div class="card"><div class="card-icon">TV</div></div>
-        <div class="card"><div class="card-icon">TV</div></div>
-        <div class="card"><div class="card-icon">TV</div></div>
+        <div class="card">beIN 1</div> <div class="card">beIN 2</div> <div class="card">beIN 3</div> <div class="card">beIN 4</div>
+        <div class="card">beIN 5</div> <div class="card">beIN 6</div> <div class="card">beIN 7</div> <div class="card">beIN 8</div>
+        <div class="card">beIN 9</div>
+    </div>
+
+    <div class="title">Alwan Sport</div>
+    <div class="grid">
+        <div class="card">Alwan 1</div> <div class="card">Alwan 2</div> <div class="card">Alwan 3</div> <div class="card">Alwan 4</div>
+        <div class="card">Alwan 5</div> <div class="card">Alwan 6</div> <div class="card">Alwan 7</div> <div class="card">Alwan 8</div>
+        <div class="card">Alwan 9</div>
+    </div>
+
+    <div class="title">کەنالێن کوردی</div>
+    <div class="grid">
+        <div class="card">روداو</div> <div class="card">NRT</div> <div class="card">کوردسات</div> <div class="card">زاگرۆس</div>
+    </div>
+
+    <div class="title">کەنالێن زارۆکان</div>
+    <div class="grid">
+        <div class="card">Spacetoon</div> <div class="card">MBC3</div>
     </div>
 
     <div class="nav">
