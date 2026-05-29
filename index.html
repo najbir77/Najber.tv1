@@ -1,58 +1,54 @@
+
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
     <meta charset="UTF-8">
     <style>
-        body { background: #0c121c; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 0; }
-        .box { background: #1a2533; padding: 20px; border-radius: 20px; border: 1px solid #00d4ff; max-width: 400px; margin: 50px auto; }
-        input { padding: 15px; width: 80%; border-radius: 10px; border: none; margin-bottom: 20px; text-align: center; }
-        button { padding: 15px 30px; background: #00d4ff; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; color: #0c121c; }
-        #msg { margin-top: 15px; color: #ff4d4d; }
-        a { color: #00d4ff; text-decoration: none; font-weight: bold; }
+        body { background: #0c121c; color: white; font-family: sans-serif; margin: 0; padding: 0; }
+        /* شاشەیا پاسۆردی */
+        #login-part { background: #1a2533; padding: 25px; border-radius: 15px; border: 1px solid #00d4ff; max-width: 350px; margin: 100px auto; text-align: center; }
+        input { padding: 12px; width: 80%; border-radius: 8px; border: none; margin-bottom: 15px; text-align: center; }
+        button { padding: 12px 30px; background: #00d4ff; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; color: #0c121c; }
         /* دیزاینێ کەنالا */
-        .app-content { padding: 20px; display: none; }
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
-        .card { background: #238636; padding: 15px; border-radius: 10px; color: white; font-size: 14px; font-weight: bold; }
+        #content-part { display: none; padding: 15px; }
+        .section-title { font-size: 18px; margin: 15px 0; color: #00d4ff; }
+        .card { background: #238636; padding: 15px; margin-bottom: 10px; border-radius: 8px; text-align: center; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<div id="login-part" class="box">
+<div id="login-part">
     <h2>NajberTV</h2>
     <input type="password" id="pass" placeholder="پاسۆردی لێ بدە">
+    <br>
     <button onclick="check()">چوونە ناڤ</button>
-    <p id="msg"></p>
+    <p id="msg" style="color: #ff4d4d; margin-top: 15px;"></p>
     <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
     <p>بۆ کرینا کودی پەیوەندیێ ب واتساپێ بکە:</p>
-    <a href="https://wa.me/9647501020015">07501020015</a>
+    <a href="https://wa.me/9647501020015" style="color:#00d4ff; font-weight:bold;">07501020015</a>
 </div>
 
-<div id="content-part" class="app-content">
-    <h1>کەنالێن NajberTV</h1>
+<div id="content-part">
+    <h2 style="text-align: center;">کەنالێن NajberTV</h2>
+    <div class="section-title">Local Sports (Kurdistan)</div>
+    <div class="card">دهۆک سپۆرت</div>
+    <div class="card">ناڤا سپۆرت</div>
+    <div class="card">زاخۆ سپۆرت</div>
     
-    <h3>Local Sports (Kurdistan)</h3>
-    <div class="grid">
-        <div class="card">دهۆک سپۆرت</div>
-        <div class="card">ناڤا سپۆرت</div>
-        <div class="card">زاخۆ سپۆرت</div>
-    </div>
-
-    <h3>beIN Sports</h3>
-    <div class="grid">
-        <div class="card">beIN 1</div>
-        <div class="card">beIN 2</div>
-        <div class="card">beIN 3</div>
-    </div>
+    <div class="section-title">beIN Sports</div>
+    <div class="card">beIN 1</div>
+    <div class="card">beIN 2</div>
+    <div class="card">beIN 3</div>
 </div>
 
 <script>
     function check() {
         var p = document.getElementById("pass").value;
-        if (p == "1234") {
+        if (p === "1234") {
             document.getElementById("login-part").style.display = "none";
             document.getElementById("content-part").style.display = "block";
         } else {
-            document.getElementById("msg").innerHTML = "پاسۆردێ تە یێ خەلەتە!<br>پەیوەندیێ ب 07501020015 بکە.";
+            document.getElementById("msg").innerHTML = "پاسۆردێ تە یێ خەلەتە!";
         }
     }
 </script>
