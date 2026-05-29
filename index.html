@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
-<style>
-  body { background: #0c121c; color: white; font-family: sans-serif; text-align: center; }
-  .box { background: #1a2533; padding: 20px; border-radius: 15px; margin: 20px; border: 1px solid #00d4ff; }
-  input { padding: 10px; border-radius: 5px; border: none; width: 80%; margin: 10px 0; }
-  button { padding: 10px 20px; background: #00d4ff; border: none; border-radius: 5px; color: black; font-weight: bold; }
-</style>
+    <style>
+        body { background-color: #0d1117; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .box { background: #161b22; padding: 30px; border-radius: 20px; border: 1px solid #30363d; margin-top: 50px; }
+        input { width: 80%; padding: 15px; border-radius: 10px; border: 1px solid #30363d; background: #0d1117; color: white; margin-bottom: 20px; }
+        button { width: 85%; padding: 15px; background: #238636; border: none; border-radius: 10px; color: white; font-size: 18px; cursor: pointer; }
+        a { color: #58a6ff; text-decoration: none; font-weight: bold; }
+    </style>
 </head>
 <body>
 
-<div id="login-screen" class="box">
-    <h2>NajberTV</h2>
-    <p>پاسۆردێ بنڤیسه:</p>
-    <input type="password" id="pass" placeholder="پاسۆردی لێ بدە">
-    <button onclick="check()">OK</button>
-    <p id="error" style="color: red;"></p>
-</div>
-
-<div id="main-content" style="display:none;">
-    <!-- ل ڤێرێ هەمی ئەو کەنالێن تە یێن کەڤن (تێبلا خۆ یان لیستێ) دانی -->
-    <h1>کەنالێن تە یێن ڤی ئای پی</h1>
-    <p>ب خێر بێن!</p>
+<div class="box">
+    <h1>NajberTV</h1>
+    <p>ب خێر بێن بۆ ئەپێ NajberTV</p>
+    <input type="password" id="pass" placeholder="پاسۆردی بنڤیسه">
+    <button onclick="check()">چوونە ناڤ</button>
+    <p id="msg" style="margin-top:20px;"></p>
 </div>
 
 <script>
     function check() {
         var p = document.getElementById("pass").value;
         if (p == "123") { // پاسۆردێ خۆ ل جهێ 123 دانی
-            document.getElementById("login-screen").style.display = "none";
-            document.getElementById("main-content").style.display = "block";
+            window.location.href = "https://www.google.com"; // ل جهێ گوگل لینکا کەنالێن خۆ دانی
         } else {
-            document.getElementById("error").innerHTML = "پاسۆردێ یێ خه له ته!<br>تکایه بۆ کرینا کودی پەیوەندیێ ب واتساپا من بکە:<br><a href='https://wa.me/9647501020015' style='color:#00d4ff;'>07501020015</a>";
+            document.getElementById("msg").innerHTML = "پاسۆردێ تە یێ چەوتە!<br><br>بۆ کرینا کودی پەیوەندیێ ب واتساپێ بکە:<br><a href='https://wa.me/9647501020015'>07501020015</a>";
         }
     }
 </script>
+
 </body>
 </html>
-
-
