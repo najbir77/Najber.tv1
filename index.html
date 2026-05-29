@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
-    <style>
-        body { background-color: #0c121c; color: white; text-align: center; padding-top: 50px; font-family: sans-serif; }
-        .box { background: #1a2533; padding: 20px; border-radius: 10px; margin: 20px; border: 1px solid #00d4ff; }
-    </style>
+<style>
+  body { background: #0c121c; color: white; font-family: sans-serif; text-align: center; }
+  .box { background: #1a2533; padding: 20px; border-radius: 15px; margin: 20px; border: 1px solid #00d4ff; }
+  input { padding: 10px; border-radius: 5px; border: none; width: 80%; margin: 10px 0; }
+  button { padding: 10px 20px; background: #00d4ff; border: none; border-radius: 5px; color: black; font-weight: bold; }
+</style>
 </head>
 <body>
-    <div class="box">
-        <h3>پاسۆردێ بنڤیسه</h3>
-        <input type="password" id="pass" placeholder="پاسۆردی لێ بدە">
-        <button onclick="check()">OK</button>
-    </div>
-    <p id="msg"></p>
 
-    <script>
-        function check() {
-            var p = document.getElementById("pass").value;
-            if (p == "123") {
-                location.reload(); // دێ پەیجێ ڤەکەت
-            } else {
-                document.getElementById("msg").innerHTML = "پاسۆردێ یێ خه له ته! تکایه بۆ کرینا کودی پەیوەندیێ ب ڤێ ژمارێ بکه: <br> <a href='https://wa.me/9647501020015'>07501020015</a>";
-            }
+<div id="login-screen" class="box">
+    <h2>NajberTV</h2>
+    <p>پاسۆردێ بنڤیسه:</p>
+    <input type="password" id="pass" placeholder="پاسۆردی لێ بدە">
+    <button onclick="check()">OK</button>
+    <p id="error" style="color: red;"></p>
+</div>
+
+<div id="main-content" style="display:none;">
+    <!-- ل ڤێرێ هەمی ئەو کەنالێن تە یێن کەڤن (تێبلا خۆ یان لیستێ) دانی -->
+    <h1>کەنالێن تە یێن ڤی ئای پی</h1>
+    <p>ب خێر بێن!</p>
+</div>
+
+<script>
+    function check() {
+        var p = document.getElementById("pass").value;
+        if (p == "123") { // پاسۆردێ خۆ ل جهێ 123 دانی
+            document.getElementById("login-screen").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+        } else {
+            document.getElementById("error").innerHTML = "پاسۆردێ یێ خه له ته!<br>تکایه بۆ کرینا کودی پەیوەندیێ ب واتساپا من بکە:<br><a href='https://wa.me/9647501020015' style='color:#00d4ff;'>07501020015</a>";
         }
-    </script>
+    }
+</script>
 </body>
 </html>
+
 
