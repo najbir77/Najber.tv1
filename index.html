@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <style>
         body { background: #0c121c; color: white; font-family: sans-serif; margin: 0; padding: 0; }
+        
         /* شاشەیا پاسۆردی */
         #login-part { background: #1a2533; padding: 25px; border-radius: 15px; border: 1px solid #00d4ff; max-width: 350px; margin: 100px auto; text-align: center; }
         input { padding: 12px; width: 80%; border-radius: 8px; border: none; margin-bottom: 15px; text-align: center; }
         button { padding: 12px 30px; background: #00d4ff; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; color: #0c121c; }
-        /* دیزاینێ کەنالا */
+        
+        /* دیزاینێ تە یێ تایبەت (ئەوێ ڕەش و شین) */
         #content-part { display: none; padding: 15px; }
-        .section-title { font-size: 18px; margin: 15px 0; color: #00d4ff; }
-        .card { background: #238636; padding: 15px; margin-bottom: 10px; border-radius: 8px; text-align: center; font-weight: bold; }
+        .section-title { font-size: 16px; margin: 20px 0 10px; color: #00d4ff; font-weight: bold; border-right: 3px solid #00d4ff; padding-right: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .card { background: #1a2533; padding: 15px 5px; border-radius: 8px; text-align: center; font-size: 12px; font-weight: bold; color: white; border: 1px solid #30363d; }
     </style>
 </head>
 <body>
@@ -24,21 +27,29 @@
     <button onclick="check()">چوونە ناڤ</button>
     <p id="msg" style="color: #ff4d4d; margin-top: 15px;"></p>
     <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-    <p>بۆ کرینا کودی پەیوەندیێ ب واتساپێ بکە:</p>
+    <p style="font-size: 14px;">بۆ کرینا کودی پەیوەندیێ ب واتساپێ بکە:</p>
     <a href="https://wa.me/9647501020015" style="color:#00d4ff; font-weight:bold;">07501020015</a>
 </div>
 
 <div id="content-part">
-    <h2 style="text-align: center;">کەنالێن NajberTV</h2>
+    <h2 style="text-align: center; color: #00d4ff;">NajberTV</h2>
+    
     <div class="section-title">Local Sports (Kurdistan)</div>
-    <div class="card">دهۆک سپۆرت</div>
-    <div class="card">ناڤا سپۆرت</div>
-    <div class="card">زاخۆ سپۆرت</div>
+    <div class="grid">
+        <div class="card">دهۆک سپۆرت</div>
+        <div class="card">ناڤا سپۆرت</div>
+        <div class="card">زاخۆ سپۆرت</div>
+    </div>
     
     <div class="section-title">beIN Sports</div>
-    <div class="card">beIN 1</div>
-    <div class="card">beIN 2</div>
-    <div class="card">beIN 3</div>
+    <div class="grid">
+        <div class="card">beIN 1</div>
+        <div class="card">beIN 2</div>
+        <div class="card">beIN 3</div>
+        <div class="card">beIN 4</div>
+        <div class="card">beIN 5</div>
+        <div class="card">beIN 6</div>
+    </div>
 </div>
 
 <script>
