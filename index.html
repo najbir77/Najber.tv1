@@ -1,44 +1,51 @@
-<style>
-    body { 
-        background: linear-gradient(to bottom, #000000, #5c0000); /* رەنگێ سۆرێ پڕۆفیشناڵ */
-        color: white; 
-        font-family: sans-serif;
-        display: flex; flex-direction: column; 
-        justify-content: center; align-items: center; 
-        height: 100vh; margin: 0; 
-    }
-    #login-part { 
-        background: rgba(0, 0, 0, 0.6); 
-        padding: 30px; 
-        border-radius: 20px; 
-        width: 320px; 
-        text-align: center;
-        border: 1px solid #ff4d4d;
-    }
-    input { 
-        width: 100%; padding: 12px; margin-bottom: 15px; 
-        border-radius: 5px; border: none;
-    }
-    button { 
-        width: 100%; padding: 12px; background: #333; 
-        color: white; border: none; border-radius: 5px; font-weight: bold;
-    }
-    .contact-footer { margin-top: 20px; font-size: 14px; color: #ff4d4d; }
-</style>
 
-<!-- ئەڤە پشکەیا تە -->
+
+
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background: linear-gradient(to bottom, #000000, #5c0000); color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        #login-part { background: rgba(0, 0, 0, 0.6); padding: 30px; border-radius: 20px; width: 300px; text-align: center; border: 1px solid #ff4d4d; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 5px; border: none; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #333; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        .contact-footer { margin-top: 20px; font-size: 14px; color: #ff4d4d; }
+    </style>
+</head>
+<body>
+
 <div id="login-part">
     <h2>NajberTV</h2>
-    <input type="text" placeholder="Add your username">
-    <input type="password" placeholder="Add your password">
-    <button>Login</button>
-    
+    <input type="text" id="username" placeholder="Add your username">
+    <input type="password" id="password" placeholder="Add your password">
+    <button onclick="check()">Login</button>
     <div class="contact-footer">
         بۆ کرینا کۆدی پەیوەندیێ ب واتساپ بکە:<br>
         <a href="https://wa.me/9647501020015" style="color: white; font-weight: bold;">07501020015</a>
     </div>
 </div>
 
+<div id="content-part" style="display: none; text-align: center;">
+    <h1>بخێر هاتی بۆ NajberTV</h1>
+</div>
 
+<script>
+    function check() {
+        var user = document.getElementById('username').value;
+        var pass = document.getElementById('password').value;
+        
+        // لێرە تو دێ یوزەر و پاسۆردێ تێستێ دانای
+        if (user === "teet62728" && pass === "4527288880807") {
+            document.getElementById('login-part').style.display = 'none';
+            document.getElementById('content-part').style.display = 'block';
+        } else {
+            alert("یوزر یان پاسۆردێ تە یێ خەلەتە!");
+        }
+    }
+</script>
 
+</body>
+</html>
 
