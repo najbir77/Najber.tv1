@@ -1,68 +1,28 @@
-<!DOCTYPE html>
-<html dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <style>
-        body { background: #0c121c; color: white; font-family: sans-serif; margin: 0; padding: 0; }
-        
-        /* شاشەیا پاسۆردی */
-        #login-part { background: #1a2533; padding: 30px; border-radius: 20px; border: 1px solid #00d4ff; max-width: 350px; margin: 100px auto; text-align: center; }
-        input { padding: 15px; width: 85%; border-radius: 10px; border: none; margin-bottom: 20px; text-align: center; font-size: 16px; }
-        button { padding: 12px 40px; background: #00d4ff; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; color: #0c121c; font-size: 16px; }
-        
-        /* دیزاینێ کارتێن تە (هەمان دیزاینێ 353) */
-        #content-part { display: none; padding: 15px; }
-        .section-title { font-size: 16px; margin: 25px 0 10px; color: #00d4ff; font-weight: bold; border-right: 4px solid #00d4ff; padding-right: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-        .card { background: #1a2533; padding: 15px 5px; border-radius: 8px; text-align: center; font-size: 12px; font-weight: bold; border: 1px solid #30363d; color: white; }
-    </style>
-</head>
-<body>
-
 <div id="login-part">
     <h2>NajberTV</h2>
-    <input type="password" id="pass" placeholder="پاسۆردی لێ بدە">
+    <input type="text" id="username" placeholder="Username" style="padding: 15px; width: 85%; margin-bottom: 10px; border-radius: 10px; border: none;">
+    <input type="password" id="password" placeholder="Password" style="padding: 15px; width: 85%; margin-bottom: 20px; border-radius: 10px; border: none;">
     <button onclick="check()">چوونە ناڤ</button>
     <p id="msg" style="color: #ff4d4d; margin-top: 15px;"></p>
     <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-    <p style="font-size: 14px;">بۆ کرینا کودی پەیوەندیێ ب واتساپێ بکە:</p>
-    <a href="https://wa.me/9647501020015" style="color:#00d4ff; font-weight:bold; font-size: 16px;">07501020015</a>
-</div>
-
-<div id="content-part">
-    <h2 style="text-align: center; color: #00d4ff;">NajberTV</h2>
-    
-    <div class="section-title">Local Sports (Kurdistan)</div>
-    <div class="grid">
-        <div class="card">دهۆک سپۆرت</div>
-        <div class="card">ناڤا سپۆرت</div>
-        <div class="card">زاخۆ سپۆرت</div>
-    </div>
-    
-    <div class="section-title">beIN Sports</div>
-    <div class="grid">
-        <div class="card">beIN 1</div>
-        <div class="card">beIN 2</div>
-        <div class="card">beIN 3</div>
-        <div class="card">beIN 4</div>
-        <div class="card">beIN 5</div>
-        <div class="card">beIN 6</div>
-    </div>
+    <p style="font-size: 14px;">بۆ کرینا کۆدی پەیوەندیێ ب واتساپ بکە:<br>
+    <a href="https://wa.me/9647501020015" style="color: #00d4ff; font-weight: bold; font-size: 16px;">07501020015</a></p>
 </div>
 
 <script>
-    function check() {
-        var p = document.getElementById("pass").value;
-        if (p === "1234") {
-            document.getElementById("login-part").style.display = "none";
-            document.getElementById("content-part").style.display = "block";
-        } else {
-            document.getElementById("msg").innerHTML = "پاسۆردێ تە یێ خەلەتە!";
-        }
+function check() {
+    var user = document.getElementById('username').value;
+    var pass = document.getElementById('password').value;
+    
+    // لێرە تو دشێی Username و Passwordـێ خۆ دابنی (بۆ تاقیکرنێ)
+    if (user === "admin" && pass === "1234") {
+        document.getElementById('login-part').style.display = 'none';
+        document.getElementById('content-part').style.display = 'block';
+    } else {
+        document.getElementById('msg').innerHTML = "یوزر یان پاسۆردێ تە یێ خەلەتە!";
     }
+}
 </script>
 
-</body>
-</html>
 
 
