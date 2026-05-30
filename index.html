@@ -1,28 +1,44 @@
-<div id="login-part">
-    <h2>NajberTV</h2>
-    <input type="text" id="username" placeholder="Username" style="padding: 15px; width: 85%; margin-bottom: 10px; border-radius: 10px; border: none;">
-    <input type="password" id="password" placeholder="Password" style="padding: 15px; width: 85%; margin-bottom: 20px; border-radius: 10px; border: none;">
-    <button onclick="check()">چوونە ناڤ</button>
-    <p id="msg" style="color: #ff4d4d; margin-top: 15px;"></p>
-    <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-    <p style="font-size: 14px;">بۆ کرینا کۆدی پەیوەندیێ ب واتساپ بکە:<br>
-    <a href="https://wa.me/9647501020015" style="color: #00d4ff; font-weight: bold; font-size: 16px;">07501020015</a></p>
-</div>
 
-<script>
-function check() {
-    var user = document.getElementById('username').value;
-    var pass = document.getElementById('password').value;
-    
-    // لێرە تو دشێی Username و Passwordـێ خۆ دابنی (بۆ تاقیکرنێ)
-    if (user === "admin" && pass === "1234") {
-        document.getElementById('login-part').style.display = 'none';
-        document.getElementById('content-part').style.display = 'block';
-    } else {
-        document.getElementById('msg').innerHTML = "یوزر یان پاسۆردێ تە یێ خەلەتە!";
+<style>
+    body { 
+        background: #0c121c; 
+        color: white; 
+        font-family: sans-serif; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        margin: 0; 
     }
-}
-</script>
+    #login-part { 
+        background: #1a2533; 
+        padding: 40px; 
+        border-radius: 20px; 
+        width: 90%; 
+        max-width: 400px; 
+        text-align: center;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    }
+    input { 
+        padding: 20px; 
+        width: 100%; 
+        margin-bottom: 20px; 
+        border-radius: 10px; 
+        border: none; 
+        font-size: 18px;
+        box-sizing: border-box;
+    }
+    button { 
+        padding: 15px 30px; 
+        width: 100%; 
+        background: #00d4ff; 
+        border: none; 
+        border-radius: 10px; 
+        font-weight: bold; 
+        font-size: 18px; 
+        cursor: pointer; 
+    }
+            </style>
 
 
 
