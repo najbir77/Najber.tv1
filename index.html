@@ -21,7 +21,32 @@
     <div id="msg" class="error"></div>
 </div>
 
-<div id="content-part" style="display: none; text-align: center;">
+<div id="<div id="content-part" style="display: none; padding: 20px;">
+    <h2 style="color: white; text-align: center;">NajberTV - لیستەیا کەنالان</h2>
+    <div id="channel-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        </div>
+</div>
+
+<script>
+// ئەڤ سکریپتە دێ کەنالان ژ سێرڤەری ڕاکێشیت
+async function loadChannels(username, password) {
+    const host = "http://new-pro.tv:8080";
+    const api = `${host}/player_api.php?username=${username}&password=${password}&action=get_live_categories`;
+    
+    try {
+        let response = await fetch(api);
+        let data = await response.json();
+        
+        let container = document.getElementById('channel-container');
+        data.forEach(cat => {
+            container.innerHTML += `<div style="background: #333; color: white; padding: 15px; border-radius: 8px;">${cat.category_name}</div>`;
+        });
+    } catch(e) {
+        alert("کەنال نەهاتنە ڕاکێشان!");
+    }
+}
+</script>
+    style="display: none; text-align: center;">
     <h1>بخێر هاتی بۆ NajberTV</h1>
 </div>
 <div id="content-part" style="display: none; text-align: center; color: white; padding: 20px;">
