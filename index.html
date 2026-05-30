@@ -33,7 +33,32 @@
 </div>
     
 <script>
-    function check() {
+    function check() {async function check() {
+    var user = document.getElementById('username').value;
+    var pass = document.getElementById('password').value;
+    
+    // لێرە پێتڤیە لۆدەرەکێ دابنێی
+    document.getElementById('msg').innerHTML = "یێ کەنالان ڕادکێشیت...";
+
+    // لێرە لینکێ API یێ سێرڤەرێ تە دڤێت (ڤی لینکێ ب ئیمەیلی یان واتساپی ژ خاوەنێ سێرڤەری بخوازە)
+    var apiUrl = "http://new-pro.tv:8080/player_api.php?username=" + user + "&password=" + pass;
+
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        if(data.user_info.auth === 1) {
+            document.getElementById('login-part').style.display = 'none';
+            document.getElementById('content-part').style.display = 'block';
+            // لێرە کەنالێن داتایێ دیار دکەی
+        } else {
+            document.getElementById('msg').innerHTML = "یوزر یان پاسۆردێ تە یێ خەلەتە!";
+        }
+    })
+    .catch(err => {
+        document.getElementById('msg').innerHTML = "سێرڤەرێ تە بەرسڤێ نادات!";
+    });
+    }
+    
         var user = document.getElementById('username').value;
         var pass = document.getElementById('password').value;
         
